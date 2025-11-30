@@ -110,3 +110,11 @@
 .font-black {
     font-weight: 900;
 }
+
+/* persian numbers */
+
+/* .farsi-numbers {
+    font-variant-numeric: tabular-nums;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+} */

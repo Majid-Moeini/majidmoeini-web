@@ -2,7 +2,7 @@
 
 /* added by AI - changeable ! */
 
-/* پالت رنگ کامل پروژه – بدون tailwind.config.js */
+/* color palet */
 .bg-primary {
   background-color: #FF680A;
 }
@@ -20,9 +20,9 @@
 }
 
 .hover\:bg-primary:hover {
-  background-color: #e55a00;
+  background-color: #FF680A;
 }
 
 .hover\:text-primary:hover {
-  color: #e55a00;
+  color: #FF680A;
 }
