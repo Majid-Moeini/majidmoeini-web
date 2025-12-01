@@ -19,10 +19,19 @@
   fill: #FF680A;
 }
 
-.hover\:bg-primary:hover {
-  background-color: #FF680A;
+.hover\:text-primary:hover {
+  color: #FF680A;
 }
 
-.hover\:text-primary:hover {
+.hover\:border-primary:hover {
+  color: #FF680A;
+}
+
+
+.active\:bg-primary:active {
+  background-color: #FFF6EC;
+}
+
+.active\:border-primary:active {
   color: #FF680A;
 }

@@ -1,23 +1,22 @@
 import Link from "next/link";
 
-export default function MenuItem({ title, address }) {
+export function MenuItem({ title, address, mobile = false }) {
     return (
         <Link
             href={address}
-            className="relative group inline-block text-gray-700 hover:text-primary"
+            className={`text-gray-700 ${mobile
+                ? "px-2 py-3  active:bg-primary active:border-r-3 active:border-primary"
+                : "relative group inline-block hover:text-primary"
+                }
+            `}
         >
-            <p className="font-iransansxv font-light text-sm">{title}</p>
+            <span className="font-iransansxv font-light text-sm">{title}</span>
 
             {/* Underline */}
-            <span
-                className="
-          absolute left-0 w-full h-0.5 bg-primary
-          opacity-0
-          transition-opacity duration-300
-          group-hover:opacity-100
-        "
-                style={{ bottom: "-8px" }}
-            ></span>
-        </Link>
+
+            {!mobile && (<span
+                className="absolute left-0 w-full h-0.5 bg-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100 -bottom-2"
+            ></span>)}
+        </Link >
     );
-}
+} 

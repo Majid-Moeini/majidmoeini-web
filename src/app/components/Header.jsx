@@ -1,10 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import { toFarsiNumber } from "../layout";
-import MenuItem from "./MenuItem";
+import { MenuItem } from "./MenuItem";
 import Image from "next/image";
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <header className="h-fit shadow-sm shadow-gray-300 md:px-[6%] md:pt-4 z-10">
+        <header className="h-fit  shadow-sm shadow-gray-300 md:px-[6%] md:pt-4 z-10">
             <div className="hidden md:flex md:justify-end">
                 <div className=" md:flex flex-row-reverse h-fit w-66 justify-between">
                     <a href="" className="flex items-center gap-3">
@@ -26,7 +30,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="h-fit md:flex md:w-full md:flex-row-reverse md:justify-between md:items-center  md:py-4">
+            <div className="h-fit items-center  md:flex md:w-full md:flex-row-reverse md:justify-between md:py-4">
 
                 <div className="hidden md:flex h-fit flex-row-reverse gap-2">
                     <a href="#" className="p-1 ">
@@ -96,7 +100,16 @@ export default function Header() {
                     </a>
                 </div>
 
-                <div className="hidden md:flex gap-7 h-fit">
+                <div className="flex py-3 px-2">
+                    <button onClick={() => setIsOpen(!isOpen)} className="md:hidden flex flex-col gap-1.5">
+                        <span className="block w-6 h-0.5 bg-black"></span>
+                        <span className="block w-6 h-0.5 bg-black"></span>
+                        <span className="block w-6 h-0.5 bg-black"></span>
+                    </button>
+
+
+                </div>
+                <nav className="hidden md:flex gap-7 h-fit">
                     <MenuItem title='خانه' address='#' />
                     <MenuItem title='خدمات' address='#' />
                     <MenuItem title='آموزش ها' address='#' />
@@ -104,8 +117,21 @@ export default function Header() {
                     <MenuItem title='درباره ما' address='#' />
                     <MenuItem title='تماس با ما' address='#' />
                     <MenuItem title='دانلود' address='#' />
-                </div>
-                <div className="w-82 md:w-auto ">
+                </nav>
+                {isOpen && (
+                    <nav className="flex w-full flex-col gap-4 mt-0 bg-white absolute md:hidden">
+                        <MenuItem title="خانه" address="#" mobile />
+                        <MenuItem title="خدمات" address="#" mobile />
+                        <MenuItem title="آموزش ها" address="#" mobile />
+                        <MenuItem title="مقالات" address="#" mobile />
+                        <MenuItem title="درباره ما" address="#" mobile />
+                        <MenuItem title="تماس با ما" address="#" mobile />
+                        <MenuItem title="دانلود" address="#" mobile />
+                    </nav>
+                )}
+
+
+                <div className="w-fit md:w-auto">
                     <Image src="/images/iCAP-Logo.png"
                         width={190}
                         height={53}
