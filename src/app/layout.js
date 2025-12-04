@@ -1,6 +1,8 @@
 import "./globals.css";
 import "./fonts.css";
-import Header from "./components/Header";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
 
 // Farsi Numbers Function
 export function toFarsiNumber(n) {
@@ -14,8 +16,10 @@ export default function RootLayout({ children }) {
       <body className="font-iransansxv">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
 }
 
+1655
