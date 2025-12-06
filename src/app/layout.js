@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body className="font-iransansxv">
         <Header />
-        {children}
+        <div className="pt-16 h-240">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
   );
 }
-
-1655

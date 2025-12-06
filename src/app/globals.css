@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 /* added by AI - changeable ! */
@@ -28,6 +29,10 @@
 
 .hover\:border-primary:hover {
   color: #FF680A;
+}
+
+.hover\:bg-primary:hover {
+  background-color: #FF7F33;
 }
 
 .active\:bg-primary:active {

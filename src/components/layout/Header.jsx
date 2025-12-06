@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { toFarsiNumber } from "../../app/layout";
 import { MenuItem } from "./MenuItem";
+import { toFarsiNumber } from "../../app/layout";
 import Image from "next/image";
 import { NAV_ITEMS } from "../../app/data/navItems";
 
@@ -18,7 +18,7 @@ export default function Header() {
     const [activeItem, setActiveItem] = useState(null);
 
     return (
-        <header className="h-fit shadow-sm shadow-gray-300 md:px-[6%] md:pt-4 z-10">
+        <header className="fixed w-full bg-white h-fit shadow-sm shadow-gray-300 md:px-[6%] md:pt-4 z-10">
             <div className="hidden md:flex md:justify-end">
                 <div className=" md:flex flex-row-reverse h-fit w-66 justify-between">
                     <a href="" className="flex items-center gap-3">
@@ -78,7 +78,7 @@ export default function Header() {
                     className="w-auto h-9 hidden md:block"
                 />
 
-                <div className="flex justify-between items-center h-fit px-4 py-2 md:hidden">
+                <div className="flex justify-between items-center h-fit px-4 py-2 md:hidden bg-white">
 
                     {/* burgur btn */}
                     {!isOpen && (
@@ -95,7 +95,7 @@ export default function Header() {
                     {isOpen && (
                         <div className="md:hidden flex w-full my-2">
                             <button
-                                className="p-2 mr-auto"
+                                className="p-2 mr-auto "
                                 onClick={() => setIsOpen(false)}
                             >
                                 <Image
@@ -133,8 +133,8 @@ export default function Header() {
                 </div>
 
                 {isOpen && (
-                    <div className="flex flex-col w-full h-screen absolute md:hidden">
-                        <nav className="flex flex-col bg-white">
+                    <div className="fixed flex bg-white flex-col w-full h-screen md:hidden">
+                        <nav className="flex flex-col ">
                             {NAV_ITEMS.map(item => (
                                 <MenuItem
                                     key={item.id}
@@ -150,65 +150,63 @@ export default function Header() {
                             ))}
                         </nav>
 
-                        <div className="flex-1">
+                        <div className="fixed w-full bottom-0 z-20">
+                            <div className="flex bg-gray-50 w-full py-4 justify-center">
+                                <Image
+                                    src="/images/iCAP-Logo.png"
+                                    width={190}
+                                    height={53}
+                                    alt="iCAP-logo"
+                                    className="w-auto h-6 "
+                                />
+                            </div>
 
-                        </div>
+                            <div className="flex flex-row-reverse h-fit justify-between px-7 py-4">
+                                <a href="" className="flex items-center gap-3">
+                                    <div className="p-2">
+                                        <Image src="/images/icons/sms-tracking.png"
+                                            width={24}
+                                            height={24}
+                                            alt="sms-tracking"
+                                            className="w-6 h-6" />
+                                    </div>
+                                    <div className="flex flex-col space-y-1">
+                                        <p className="text-xs font-bold text-gray-600 ">ارسال ایمیل</p>
+                                        <p className="text-xs font-bold text-gray-800 ">info@r-icap.com</p>
+                                    </div>
+                                </a>
+                                <a href="#" className="flex items-center gap-3">
+                                    <div className="p-2">
+                                        <Image src="/images/icons/call-calling.png"
+                                            width={24}
+                                            height={24}
+                                            alt="call-calling"
+                                            className="w-6 h-6" />
+                                    </div>
+                                    <div className="flex flex-col space-y-1">
+                                        <p className="text-xs font-bold text-gray-600 ">شماره تماس</p>
+                                        <p className="text-xs font-bold text-gray-800 ">{toFarsiNumber('09301234567')}</p>
+                                    </div>
+                                    {/* <p dir="ltr" className="text-right">{toFarsiNumber('0930 - 1234567')}</p> */}
+                                </a>
+                            </div>
+                            <div className="h-14 bg-primary flex justify-around items-center">
+                                <a href="#" className=" p-1 ">
+                                    <InstagramIcon className="text-white w-6 h-6" />
+                                </a>
 
-                        <div className="flex bg-gray-50 w-full py-4 justify-center">
-                            <Image
-                                src="/images/iCAP-Logo.png"
-                                width={190}
-                                height={53}
-                                alt="iCAP-logo"
-                                className="w-auto h-6 "
-                            />
-                        </div>
+                                <a href="#" className=" p-1 ">
+                                    <TelegramIcon className="text-white w-6 h-6" />
+                                </a>
 
-                        <div className="flex flex-row-reverse h-fit justify-between px-7 py-4">
-                            <a href="" className="flex items-center gap-3">
-                                <div className="p-2">
-                                    <Image src="/images/icons/sms-tracking.png"
-                                        width={24}
-                                        height={24}
-                                        alt="sms-tracking"
-                                        className="w-6 h-6" />
-                                </div>
-                                <div className="flex flex-col space-y-1">
-                                    <p className="text-xs font-bold text-gray-600 ">ارسال ایمیل</p>
-                                    <p className="text-xs font-bold text-gray-800 ">info@r-icap.com</p>
-                                </div>
-                            </a>
-                            <a href="#" className="flex items-center gap-3">
-                                <div className="p-2">
-                                    <Image src="/images/icons/call-calling.png"
-                                        width={24}
-                                        height={24}
-                                        alt="call-calling"
-                                        className="w-6 h-6" />
-                                </div>
-                                <div className="flex flex-col space-y-1">
-                                    <p className="text-xs font-bold text-gray-600 ">شماره تماس</p>
-                                    <p className="text-xs font-bold text-gray-800 ">{toFarsiNumber('09301234567')}</p>
-                                </div>
-                                {/* <p dir="ltr" className="text-right">{toFarsiNumber('0930 - 1234567')}</p> */}
-                            </a>
-                        </div>
-                        <div className="h-14 bg-primary flex justify-around items-center">
-                            <a href="#" className=" p-1 ">
-                                <InstagramIcon className="text-white w-6 h-6" />
-                            </a>
+                                <a href="#" className=" p-1 ">
+                                    <WhatsappIcon className="text-white w-6 h-6" />
+                                </a>
 
-                            <a href="#" className=" p-1 ">
-                                <TelegramIcon className="text-white w-6 h-6" />
-                            </a>
-
-                            <a href="#" className=" p-1 ">
-                                <WhatsappIcon className="text-white w-6 h-6" />
-                            </a>
-
-                            <a href="#" className=" p-1 ">
-                                <FacebookIcon className="text-white w-6 h-6" />
-                            </a>
+                                <a href="#" className=" p-1 ">
+                                    <FacebookIcon className="text-white w-6 h-6" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 )}
