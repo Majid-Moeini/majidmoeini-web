@@ -6,6 +6,7 @@ export default function InstagramIcon({ className = " hover:text-primary transit
             viewBox="0 0 20 20"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="InstagramIcon"
             className={className}
         >
             <path

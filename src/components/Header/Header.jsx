@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { MenuItem } from "./MenuItem";
+import { MenuItem } from "../Header/MenuItem";
 import { toFarsiNumber } from "../../app/layout";
 import Image from "next/image";
-import { NAV_ITEMS } from "../../app/data/navItems";
+import { NAV_ITEMS } from "../Header/data/navItems";
 
 // icons
 import FacebookIcon from "../icons/FacebookIcon";
