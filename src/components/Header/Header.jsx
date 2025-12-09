@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import { MenuItem } from "../Header/MenuItem";
 import { toFarsiNumber } from "../../app/layout";
 import Image from "next/image";
 import { NAV_ITEMS } from "../Header/data/navItems";
+import React, { useState, useEffect } from 'react';
+
 
 // icons
 import FacebookIcon from "../icons/FacebookIcon";
@@ -16,11 +18,37 @@ import InstagramIcon from "../icons/InstagramIcon";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeItem, setActiveItem] = useState(null);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Handle Scroll Logic
+    useEffect(() => {
+        const handleScroll = () => {
+
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const headerBaseClasses = "fixed z-50 transition-all duration-500 ease-in-out bg-white h-fit ";
+
+    const islandState = "top-0 md:top-[50px] left-0 right-0 lg:left-[10%] lg:right-[10%] md:px-5 rounded-3xl md:py-2 border-10 border-gray-200";
+
+    const stickyState = "w-full rounded-none border-b border-gray-400/50  md:px-[6%] md:pt-4";
+
+
+    // md:left-8 md:right-8 
 
     return (
-        <header className="fixed w-full bg-white h-fit shadow-sm shadow-gray-300 md:px-[6%] md:pt-4 z-10">
-            <div className="hidden md:flex md:justify-end">
-                <div className=" md:flex flex-row-reverse h-fit w-66 justify-between">
+        <header className={`${headerBaseClasses} ${isScrolled ? stickyState : islandState}`}>
+
+            <div className={`hidden ${isScrolled ? "md:flex md:justify-end" : "hidden"}`}>
+                <div className=" md:flex flex-row-reverse h-fit w-66 justify-between ">
                     <a href="" className="flex items-center gap-3">
                         <Image src="/images/icons/sms-tracking.png"
                             width={24}
@@ -75,7 +103,7 @@ export default function Header() {
                     width={190}
                     height={53}
                     alt="iCAP-logo"
-                    className="w-auto h-9 hidden md:block"
+                    className={`w-auto hidden md:block ${isScrolled ? 'h-9' : 'h-6'} `}
                 />
 
                 <div className="flex justify-between items-center h-fit px-4 py-2 md:hidden bg-white">

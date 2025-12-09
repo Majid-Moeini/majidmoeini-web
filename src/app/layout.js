@@ -2,6 +2,9 @@ import "./globals.css";
 import "./fonts.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+// import Header from "@/components/Header/Header";
+// import Footer from "@/components/layout/Footer";
+
 
 // Farsi Numbers Function
 export function toFarsiNumber(n) {

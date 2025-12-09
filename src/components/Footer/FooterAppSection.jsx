@@ -13,7 +13,7 @@ export default function FooterAppSection() {
                         width={319}
                         height={295}
                         alt="اپلیکیشن"
-                        className="xl:-mt-24 w-[132px] h-[120px] md:w-auto md:max-w-full md:h-auto"
+                        className="xl:-mt-24 w-[132px] h-[120px] md:w-auto md:max-w-full md:h-55"
                     />
                 </div>
 
