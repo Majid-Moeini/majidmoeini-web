@@ -6,7 +6,7 @@ export function MenuItem({ title, address, mobile = false }) {
             href={address}
             className={`text-gray-700 ${mobile
                 ? "px-4 py-3  active:bg-primary active:border-r-[3px] active:border-primary"
-                : "relative group inline-block hover:text-primary"
+                : "relative group inline-block hover:text-primary shrink-0"
                 }
             `}
         >

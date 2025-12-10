@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
     { id: 'home', label: 'خانه', href: '/' },
-    { id: 'services', label: 'خدمات', href: '/services' },
+    { id: 'services', label: 'خدمات', href: '/R-Dip' },
     { id: 'courses', label: 'آموزش ها', href: '/courses' },
     {
         id: 'articles', label: 'مقالات', href: '/articles',
