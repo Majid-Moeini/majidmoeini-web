@@ -1,14 +1,12 @@
 "use client";
 
-// import { useState } from "react";
 import { MenuItem } from "../Header/MenuItem";
-import { toFarsiNumber } from "../../app/layout";
+import { toFarsiNumber } from "@/lib/utils";
 import Image from "next/image";
 import { NAV_ITEMS } from "../Header/data/navItems";
 import React, { useState, useEffect } from 'react';
 import IcapButton from "@/components/ui/icap-ui/IcapButton"
 import { usePathname } from "next/navigation";
-
 
 // icons
 import FacebookIcon from "../icons/FacebookIcon";
@@ -17,10 +15,11 @@ import TelegramIcon from "../icons/TelegramIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 
 
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeItem, setActiveItem] = useState(null);
-    let [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const pathname = usePathname();
     const isHome = pathname === "/";
@@ -46,14 +45,15 @@ export default function Header() {
 
     const stickyState = "w-full rounded-none  md:px-[6%] md:pt-4 w-full ";
 
-
-    // md:left-8 md:right-8 
-
     return (
         <header className="flex">
 
-            <div className={`hidden ${isHome ? 'md:flex flex-row-reverse px-[10%] w-full justify-between pt-4' : 'hidden'} items-center `}>
-                <IcapButton className="w-[175px] text-center" href={'#'}>ورود و عضویت</IcapButton>
+            <div className={`hidden ${isHome ? 'md:flex flex-row-reverse px-[10%] w-full justify-between pt-4' : 'hidden'} items-center fixed z-50`}>
+
+                <div className="w-[175px]">
+                    <IcapButton href={'#'}>ورود و عضویت</IcapButton>
+                </div>
+
                 <div className="flex gap-5 flex-row-reverse">
                     <a href="#" className="flex gap-3 items-center" >
                         <span className="bg-gray-100/60 p-2.5 rounded-xl">

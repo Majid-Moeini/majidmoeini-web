@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export function MenuItem({ title, address, mobile = false }) {
     return (
         <Link
@@ -13,10 +14,9 @@ export function MenuItem({ title, address, mobile = false }) {
             <span className="font-iransansxv font-light text-sm">{title}</span>
 
             {/* Underline */}
-
             {!mobile && (<span
                 className="absolute left-0 w-full h-0.5 bg-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100 -bottom-2"
             ></span>)}
         </Link >
     );
-} 
+}

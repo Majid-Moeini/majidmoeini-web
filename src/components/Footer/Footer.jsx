@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { toFarsiNumber } from "../../app/layout";
+import { toFarsiNumber } from "@/lib/utils";
 
 import FacebookIcon from "../icons/FacebookIcon";
 import WhatsappIcon from "../icons/WhatsappIcon";

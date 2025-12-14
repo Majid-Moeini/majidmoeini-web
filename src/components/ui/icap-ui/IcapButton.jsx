@@ -13,7 +13,7 @@ export default function CustomButton({
     height,
     mobileSize = "sm",  //  Mobile Size
     desktopSize = "default",    //  Desktop size
-    className = "transition-transform duration-150 ease hover:scale-[1.02] text-center",    //  animation
+    className = "transition-transform duration-150 ease hover:scale-[1.02] text-center w-full",
     ...props
 }) {
 
