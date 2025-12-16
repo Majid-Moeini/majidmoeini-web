@@ -1,114 +1,114 @@
 /* src/app/fonts.css */
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Modam';
-    src: url('/fonts/modam/Modam-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Modam";
+  src: url("/fonts/modam/Modam-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
 }
 
 /* iranSansXV */
 
 @font-face {
-    font-family: 'IRANSansXV';
-    src: url('/fonts/IRANSansXV.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
+  font-family: "IRANSansXV";
+  src: url("/fonts/IRANSansXV.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
 }
 
 .font-iransansxv {
-    font-family: 'IRANSansXV', sans-serif;
+  font-family: "IRANSansXV", sans-serif;
 }
 
 .font-iransansxv-bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* iranSansXV */
 
 .font-modam {
-    font-family: 'Modam', sans-serif;
+  font-family: "Modam", sans-serif;
 }
 
 .font-extralight {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .font-light {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .font-regular {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .font-medium {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .font-semibold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .font-bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .font-extrabold {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .font-black {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 /* persian numbers */
