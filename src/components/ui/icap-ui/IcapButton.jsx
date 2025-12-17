@@ -13,11 +13,12 @@ export default function CustomButton({
     height,
     mobileSize = "sm",  //  Mobile Size
     desktopSize = "default",    //  Desktop size
-    className = "transition-transform duration-150 ease hover:scale-[1.02] text-center w-full",
+    className = "",
     ...props
 }) {
 
-    const Wrapper = href ? Link : 'div';
+    // const Wrapper = href ? Link : 'div';
+    const Wrapper = href ? Link : React.Fragment;
 
     return (
         <Button
@@ -27,14 +28,15 @@ export default function CustomButton({
             ${color} ${hover} 
             ${fullWidth ? "w-full" : width ? `w-[${width}px]` : ""} 
             ${height ? `h-[${height}px]` : ""} 
-            rounded-lg px-4 py-2 text-white font-medium transition-all duration-200
+            rounded-lg px-4 py-2 text-white font-medium transition-all duration-200 flex items-center justify-center text-sm ease hover:scale-[1.02] text-center w-full
             ${className}
             `}
             {...props}
         >
-            <Wrapper href={href} className={`block md:inline-block`}>
+            <Wrapper href={href}>
                 {children}
             </Wrapper>
+
         </Button>
     );
 

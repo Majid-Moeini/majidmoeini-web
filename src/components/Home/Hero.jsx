@@ -15,8 +15,10 @@ export default function Hero() {
 
       {/* content */}
 
-      <div className="relative flex flex-col lg:flex-row z-10 h-fit mt-20 md:mt-[200px] items-center lg:-translate-x-[150px] xl:-translate-x-[200px]">
-        <div className="flex lg:w-[60%] lg:max-w-[700px] flex-col justify-center gap-2 h-full items-center lg:items-start lg:ml-auto md:mb-15 mb-4 ">
+      <div className="relative flex flex-col lg:flex-row z-10 h-fit mt-20 md:mt-[130px] items-center lg:-translate-x-[150px] xl:-translate-x-[200px]">
+
+        {/*  */}
+        <div className="flex lg:w-[60%] lg:max-w-[700px] flex-col justify-center gap-2 h-full items-center lg:items-start lg:ml-auto md:mb-0 mb-4 md:mt-15 lg:mt-0">
           <p className="inline-block rounded-3xl bg-white px-4 py-2 mb-3 text-sm md:text-base text-gray-800 ">
             اپلیکیشن کمک دست راننده و مکانیک
           </p>
@@ -69,7 +71,7 @@ export default function Hero() {
         </div>
 
         {/* right image */}
-        <div className="relative min-w-4xl h-[335px] md:h-[435px] -translate-x-[9%] md:-translate-x-[11%] lg:-translate-x-[10%] ">
+        <div className="relative min-w-4xl h-[335px] md:h-[535px] -translate-x-[9%] md:-translate-x-[11%] lg:-translate-x-[10%] ">
           <Image
             src="/images/personPic.png"
             alt="icap-person"

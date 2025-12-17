@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { FOOTER_LINKS } from "./data";
+import { FOOTER_LINKS } from "@/components/Data/Footer/data"
 
 export default function MobileLinks() {
     return (

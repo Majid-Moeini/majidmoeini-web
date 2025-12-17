@@ -1,4 +1,5 @@
-import { FOOTER_LINKS } from "./data";
+// import { FOOTER_LINKS } from "./data";
+import { FOOTER_LINKS } from "@/components/Data/Footer/data"
 import TrustBadge from "../TrustBadge";
 import Link from "next/link";
 
