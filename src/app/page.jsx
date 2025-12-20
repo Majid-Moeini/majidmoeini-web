@@ -3,7 +3,7 @@ import React from "react";
 //import Image from "next/image";
 //import { Button } from '@/components/ui/button';
 import Hero from "@/components/Home/Hero";
-import RepairServiceList from "@/components/Home/RepairServiceList";
+import RepairService from "@/components/Home/RepairService";
 import RdipCard from "@/components/Home/RdipCard";
 import CarHelpCard from "@/components/Home/CarHelpCard";
 import OnlineServise from "@/components/Home/OnlineServise";
@@ -23,7 +23,7 @@ export default function Page() {
       {/* main  */}
       <div>
         <RdipCard />
-        <RepairServiceList />
+        <RepairService />
         <CarHelpCard />
         <OnlineServise />
         <LatestArticles />
