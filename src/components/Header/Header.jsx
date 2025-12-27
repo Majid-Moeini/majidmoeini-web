@@ -9,7 +9,7 @@ import IcapButton from "@/components/ui/icap-ui/IcapButton"
 import { usePathname } from "next/navigation";
 
 // icons
-import FacebookIcon from "../icons/FacebookIcon";
+import EitaaIcon from "../icons/EitaaIcon";
 import WhatsappIcon from "../icons/WhatsappIcon";
 import TelegramIcon from "../icons/TelegramIcon";
 import InstagramIcon from "../icons/InstagramIcon";
@@ -57,7 +57,7 @@ export default function Header() {
                 <div className="flex gap-5 flex-row-reverse">
                     <a href="#" className="flex gap-3 items-center" >
                         <span className="bg-gray-100/60 p-2.5 rounded-xl">
-                            <Image src="/images/icons/sms-tracking.png"
+                            <Image src="/images/icons/sms-tracking.svg"
                                 width={24}
                                 height={24}
                                 alt="sms-tracking"
@@ -72,7 +72,7 @@ export default function Header() {
 
                     <a href="#" className="flex gap-3 items-center" >
                         <span className="bg-gray-100/60 p-2.5 rounded-xl">
-                            <Image src="/images/icons/call-calling.png"
+                            <Image src="/images/icons/call-calling.svg"
                                 width={24}
                                 height={24}
                                 alt="call-calling"
@@ -95,14 +95,14 @@ export default function Header() {
                 <div className={`hidden ${isHome ? (isScrolled ? "md:flex md:justify-end" : "hidden") : "md:flex md:justify-end"}`}>
                     <div className=" md:flex flex-row-reverse h-fit w-66 justify-between ">
                         <a href="" className="flex items-center gap-3">
-                            <Image src="/images/icons/sms-tracking.png"
+                            <Image src="/images/icons/sms-tracking.svg"
                                 width={24}
                                 height={24}
                                 alt="sms-tracking"
                                 className="w-6 h-6" />
                             <p className="text-xs font-bold text-gray-800 hover:text-primary">info@r-icap.com</p></a>
                         <a href="#" className="flex items-center gap-3">
-                            <Image src="/images/icons/call-calling.png"
+                            <Image src="/images/icons/call-calling.svg"
                                 width={24}
                                 height={24}
                                 alt="call-calling"
@@ -117,7 +117,7 @@ export default function Header() {
 
                     <div className="hidden lg:flex h-fit flex-row-reverse gap-2">
                         <a href="#" className="p-1 text-gray-500 ">
-                            <FacebookIcon />
+                            <EitaaIcon />
                         </a>
                         <a href="" className="p-1 text-gray-500">
                             <WhatsappIcon />
@@ -144,7 +144,7 @@ export default function Header() {
 
                     {/* Desctop logo */}
                     <Image
-                        src="/images/iCAP-Logo.png"
+                        src="/images/iCAP-Logo.svg"
                         width={190}
                         height={53}
                         alt="iCAP-logo"
@@ -172,9 +172,9 @@ export default function Header() {
                                     onClick={() => setIsOpen(false)}
                                 >
                                     <Image
-                                        src="/images/icons/close-icon.png"
-                                        width={16}
-                                        height={16}
+                                        src="/images/icons/close-icon.svg"
+                                        width={14}
+                                        height={14}
                                         alt="close"
                                         className="w-4 h-4"
                                     />
@@ -185,7 +185,7 @@ export default function Header() {
                         {/* Mobile logo */}
                         {!isOpen && (
                             <Image
-                                src="/images/iCAP-Logo.png"
+                                src="/images/iCAP-Logo.svg"
                                 width={190}
                                 height={53}
                                 alt="iCAP-logo"
@@ -196,7 +196,7 @@ export default function Header() {
                         {/* call icon gray */}
                         {!isOpen && (
                             <Image
-                                src="/images/icons/call-calling-gray.png"
+                                src="/images/icons/call-calling-gray.svg"
                                 width={24}
                                 height={24}
                                 alt="call-calling"
@@ -226,7 +226,7 @@ export default function Header() {
                             <div className="fixed w-full bottom-0 z-20">
                                 <div className="flex bg-gray-50 w-full py-4 justify-center">
                                     <Image
-                                        src="/images/iCAP-Logo.png"
+                                        src="/images/iCAP-Logo.svg"
                                         width={190}
                                         height={53}
                                         alt="iCAP-logo"
@@ -237,7 +237,7 @@ export default function Header() {
                                 <div className="flex flex-row-reverse h-fit justify-between px-7 py-4">
                                     <a href="" className="flex items-center gap-3">
                                         <div className="p-2">
-                                            <Image src="/images/icons/sms-tracking.png"
+                                            <Image src="/images/icons/sms-tracking.svg"
                                                 width={24}
                                                 height={24}
                                                 alt="sms-tracking"
@@ -277,7 +277,7 @@ export default function Header() {
                                     </a>
 
                                     <a href="#" className=" p-1 ">
-                                        <FacebookIcon className="text-white w-6 h-6" />
+                                        <EitaaIcon className="text-white w-6 h-6" />
                                     </a>
                                 </div>
                             </div>

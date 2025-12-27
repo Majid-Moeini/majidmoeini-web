@@ -17,7 +17,6 @@ export default function Hero() {
 
       <div className="relative flex flex-col lg:flex-row z-10 h-fit mt-20 md:mt-[130px] items-center lg:-translate-x-[150px] xl:-translate-x-[200px]">
 
-        {/*  */}
         <div className="flex lg:w-[60%] lg:max-w-[700px] flex-col justify-center gap-2 h-full items-center lg:items-start lg:ml-auto md:mb-0 mb-4 md:mt-15 lg:mt-0">
           <p className="inline-block rounded-3xl bg-white px-4 py-2 mb-3 text-sm md:text-base text-gray-800 ">
             اپلیکیشن کمک دست راننده و مکانیک
@@ -40,11 +39,11 @@ export default function Hero() {
                 <span className="flex items-center gap-3 text-sm md:text-lg">
                   دانلود از مایکت
                   <Image
-                    src="/images/icons/Myket.png"
+                    src="/images/icons/Myket.svg"
                     width={22}
                     height={22}
                     alt="Myket"
-                    className="md:size-6 size-4"
+                    className="md:size-7 size-5"
                   />
                 </span>
               </a>
@@ -58,11 +57,11 @@ export default function Hero() {
                 <span className="flex items-center gap-3 text-sm md:text-lg rounded-4xl">
                   دانلود از بازار
                   <Image
-                    src="/images/icons/Bazar.png"
-                    width={20}
-                    height={21}
+                    src="/images/icons/Bazar.svg"
+                    width={24}
+                    height={24}
                     alt="Bazar"
-                    className="md:size-6 size-4"
+                    className="md:size-7 size-5"
                   />
                 </span>
               </a>

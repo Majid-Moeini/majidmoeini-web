@@ -12,14 +12,14 @@ export default function RdipCard(props) {
   };
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 ">
+      <div className="max-w-full mx-auto px-4 md:px-8 ">
 
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="text-2xl md:text-[28px] font-extrabold mb-4 ">
+          <h2 className="text-xl md:text-4xl font-extrabold mb-4 font-modam">
             {title}
           </h2>
 
-          <h4 className="text-lg text-gray-600 mb-4 ">
+          <h4 className="text-[10px] md:text-base text-gray-600 mb-4 ">
             {subtitle}
           </h4>
         </div>
@@ -35,7 +35,7 @@ export default function RdipCard(props) {
           </div>
 
           <div className="md:w-1/2 md:order-1 text-center md:text-right">
-            <p className="leading-8 text-gray-700 mb-6 text-start">
+            <p className="leading-8 text-gray-700 mb-6 text-justify">
               {description}
             </p>
 
@@ -45,16 +45,16 @@ export default function RdipCard(props) {
                   key={index}
                   className="flex items-center gap-3 justify-start"
                 >
-                  <div className="p-2 border-2 border-gray-300 rounded-xl">
+                  <div className="p-2 border-2 border-gray-300 rounded-xl ">
                     <Image
-                      src="/images/icons/star.png"
+                      src="/images/icons/star.svg"
                       width={24}
                       height={24}
                       alt="icon star"
                       className="w-6 h-6 "
                     />
                   </div>
-                  <span className="leading-7 text-gray-800">
+                  <span className="leading-7 text-gray-800 text-justify">
                     {item}
                   </span>
                 </li>

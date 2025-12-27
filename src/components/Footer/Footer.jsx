@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { toFarsiNumber } from "@/lib/utils";
 
-import FacebookIcon from "../icons/FacebookIcon";
+import FacebookIcon from "../icons/EitaaIcon";
 import WhatsappIcon from "../icons/WhatsappIcon";
 import TelegramIcon from "../icons/TelegramIcon";
 import InstagramIcon from "../icons/InstagramIcon";
@@ -12,7 +12,7 @@ import FooterLinks from "./FooterLinks/FooterLinks";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col items-center mt-auto pt-5">
+    <section className="flex flex-col items-center mt-auto pt-15 md:pt-5">
       {/* div اصلی */}
 
       <div className="container flex flex-col md:grid lg:grid-cols-4 lg:grid-rows-4 md:gap-y-4 gap-x-6 md:py-3 lg:w-[1200]">
@@ -131,7 +131,7 @@ export default function Footer() {
       {/* نوار مشکی پایین */}
       <div className="bg-black text-center py-2 md:mt-4 w-full">
         <p className="text-white text-sm m-0">
-          تمامی حقوق برای فروشگاه ساعتچی محفوظ است.
+          © 2025 R-Icap - All Rights Reserved
         </p>
       </div>
     </section>

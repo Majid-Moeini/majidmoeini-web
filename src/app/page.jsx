@@ -5,8 +5,8 @@ import React from "react";
 import Hero from "@/components/Home/Hero";
 import RepairService from "@/components/Home/RepairService";
 import RdipCard from "@/components/Home/RdipCard";
-import CarHelpCard from "@/components/Home/CarHelpCard";
-import OnlineServise from "@/components/Home/OnlineServise";
+import PaidServices from "@/components/Home/PaidServices";
+import EmergencyServices from "@/components/Home/EmergencyServices";
 import LatestArticles from "@/components/Home/LatestArticles";
 import FAQ from "@/components/Home/FAQ";
 
@@ -20,12 +20,12 @@ export default function Page() {
     <main className="w-full">
       <Hero />
 
-      {/* main  */}
-      <div>
+      {/* body */}
+      <div className="max-w-7xl mx-auto">
         <RdipCard />
         <RepairService />
-        <CarHelpCard />
-        <OnlineServise />
+        <EmergencyServices />
+        <PaidServices />
         <LatestArticles />
         <FAQ />
       </div>
