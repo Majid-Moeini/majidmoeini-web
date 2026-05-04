@@ -1,6 +1,31 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+}
+
+body {
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-quicksand {
+  font-family: var(--font-quicksand);
+}
+
+.font-nunito {
+  font-family: var(--font-nunito);
+} */
 
 /* @custom-variant dark (&:is(.dark *)); */
 
@@ -8,41 +33,40 @@
 
 /* color palet */
 .bg-primary {
-  background-color: #FF680A;
+  background-color: #ff680a;
 }
 
 .text-primary {
-  color: #FF680A;
+  color: #ff680a;
 }
 
 .border-primary {
-  border-color: #FF680A;
+  border-color: #ff680a;
 }
 
 .fill-primary {
-  fill: #FF680A;
+  fill: #ff680a;
 }
 
 .hover\:text-primary:hover {
-  color: #FF680A;
+  color: #ff680a;
 }
 
 .hover\:border-primary:hover {
-  color: #FF680A;
+  color: #ff680a;
 }
 
 .hover\:bg-primary:hover {
-  background-color: #FF7F33;
+  background-color: #ff7f33;
 }
 
 .active\:bg-primary:active {
-  background-color: #FFF6EC;
+  background-color: #fff6ec;
 }
 
 .active\:border-primary:active {
-  color: #FF680A;
+  color: #ff680a;
 }
-
 
 @layer utilities {
   .animate-detail {
@@ -57,7 +81,6 @@
   }
 }
 
-
 /* hide scrollbar but keep scroll */
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -71,6 +94,35 @@
   /* Chrome, Safari */
 }
 
+@keyframes waveSlow {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-28px);
+  }
+}
+
+@keyframes waveMedium {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes waveFast {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
 
 /* 
 @theme inline {
