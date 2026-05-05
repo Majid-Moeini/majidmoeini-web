@@ -68,7 +68,7 @@ export default function page() {
         <p className="text-lg md:text-xl text-gray-300 mb-2 md:max-w-3xl w-full font-modam mt-3 whitespace-pre-line md:text-center text-justify">
           {`Passionate Front-End Developer with a year of practical experience crafting sleek, responsive UIs using React, Next.js, and Tailwind CSS. My focus is on creating optimized, fluid user experiences.
 
-            I have taken multiple projects from ideation to production, gaining valuable insights into real-world web development challenges. I thrive in environments that encourage continuous learning and innovation.
+            I Have taken multiple projects from ideation to production, gaining valuable insights into real-world web development challenges. I thrive in environments that encourage continuous learning and innovation.
 
             I am looking to join a dynamic team where I can tackle complex problems, collaborate on impactful products, and learn from seasoned professionals. I believe that the best growth comes from collaboration and shared expertise.`}
         </p>
