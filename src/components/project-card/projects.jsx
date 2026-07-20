@@ -3,7 +3,7 @@ import { projectData } from "./project-data";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
 
-export default function Project() {
+export default function Projects() {
   return (
     <div className="w-full grid md:grid-cols-3 grid-cols-1 md:gap-8 gap-4">
       {projectData.map((item) => (
@@ -35,7 +35,11 @@ export default function Project() {
               ))}
             </ul>
 
-            <a href={item.url} className="w-full flex justify-end items-end">
+            <a
+              href={item.url}
+              className="w-full flex justify-end items-end"
+              target="_blank"
+            >
               <ArrowUpRightIcon className="m-3 bg-blue-400 hover:bg-blue-400/60 text-white rounded-2xl p-0.5 duration-300 cursor-pointer scale-120" />
             </a>
           </div>

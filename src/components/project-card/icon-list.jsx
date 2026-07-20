@@ -5,6 +5,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiVitess } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { RiJavascriptFill } from "react-icons/ri";
 
 const fatherClass =
   "relative group flex items-center gap-1.5 p-1 cursor-pointer w-fit shrink-0";
@@ -50,6 +51,15 @@ export function TailWindIcon() {
     <div className={fatherClass}>
       <RiTailwindCssFill className="scale-110 group-hover:text-blue-300 duration-400" />
       TailWind
+    </div>
+  );
+}
+
+export function JavascriptIcon() {
+  return (
+    <div className={fatherClass}>
+      <RiJavascriptFill className="scale-130 group-hover:text-amber-300 duration-400" />
+      Java script
     </div>
   );
 }

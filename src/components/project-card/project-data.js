@@ -1,4 +1,5 @@
 import {
+  JavascriptIcon,
   NextIcon,
   ReactIcon,
   TailWindIcon,
@@ -16,14 +17,14 @@ export const projectData = [
   },
   {
     id: 2,
-    src: "images/git.png",
+    src: "images/project-one.png",
     title: "I CAP 2",
     url: "https://r-icap.com",
     Technology: [ReactIcon, NextIcon, TypeScriptIcon, ViteIcon],
   },
   {
     id: 3,
-    src: "images/git.png",
+    src: "images/project-tow.png",
     title: "I CAP 3",
     url: "https://r-icap.com",
     Technology: [ReactIcon, NextIcon, TypeScriptIcon, ViteIcon],
@@ -33,7 +34,7 @@ export const projectData = [
     src: "images/git.png",
     title: "I CAP 4",
     url: "https://r-icap.com",
-    Technology: [ReactIcon, NextIcon],
+    Technology: [ReactIcon, NextIcon, JavascriptIcon],
   },
   {
     id: 5,
