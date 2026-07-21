@@ -29,7 +29,7 @@ export default function page() {
           <div className="bg-white size-40 md:size-60 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
             <Image
               // src="/images/Majidmoeini_web.png"
-              src="/images/Majidmoeini_web-1.png"
+              src="/images/Majidmoeini_web.png"
               width={776}
               height={1102}
               alt="Person"
