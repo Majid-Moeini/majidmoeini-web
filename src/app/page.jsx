@@ -26,14 +26,14 @@ export default function page() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 gap-3">
-          <div className="bg-white size-40 md:size-60 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
+          <div className="bg-white size-40 md:size-70 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
             <Image
               // src="/images/Majidmoeini_web.png"
-              src="/images/Majidmoeini_web-1.png"
+              src="/images/Majidmoeini_web.png"
               width={776}
               height={1102}
               alt="Person"
-              className="reletive w-40 md:w-60 h-fit md:h-fit border-6 border-b-white rounded-full"
+              className="reletive w-40 md:w-70 h-fit md:h-fit border-6 border-b-white rounded-b-full"
             />
           </div>
 
