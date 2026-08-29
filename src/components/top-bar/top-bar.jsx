@@ -1,25 +1,25 @@
-import PillNav from './PillNav';
+import PillNav from "./PillNav";
 // import logo from '/path/to/logo.svg';
 export default function TopBar() {
   return (
     <PillNav
-      logo='/images/Micon.svg'
+      logo="/images/Micon.svg"
       logoAlt="Company Logo"
       items={[
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/about' },
-        { label: 'Services', href: '/services' },
-        { label: 'Contact', href: '/contact' }
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+        { label: "Services", href: "/services" },
+        { label: "Contact", href: "/contact" },
       ]}
       activeHref="/"
       className="custom-nav"
       ease="power2.easeOut"
-      baseColor="#000000"
-      pillColor="#ffffff"
+      baseColor="000000"
+      pillColor="ffffff"
       hoveredPillTextColor="#ffffff"
       pillTextColor="#000000"
       theme="dark"
       initialLoadAnimation
     />
-  )
+  );
 }
