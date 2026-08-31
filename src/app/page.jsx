@@ -25,6 +25,7 @@ export default function page() {
           />
         </div>
 
+
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 gap-3">
           <div className="bg-white size-40 md:size-70 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
             <Image
@@ -56,7 +57,7 @@ export default function page() {
               "Passionate Front-End Developer with a year of practical experience in designing sleek, responsive interfaces. I specialize in using React, Next.js, and Tailwind CSS to deliver optimized, fluid, and engaging user experiences."
             }
           </p>
-
+          {/* sdsdsd */}
           <button className="px-10 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 text-white rounded-full  transition font-modam text-xl font-light cursor-pointer md:mt-3">
             {"Contact Me"}
           </button>
