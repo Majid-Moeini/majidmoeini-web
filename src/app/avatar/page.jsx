@@ -1,86 +1,87 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
-export default function Avatar() {
-    const containerRef = useRef(null);
-
-    const [eyes, setEyes] = useState({
-        left: { x: 0, y: 0 },
-        right: { x: 0, y: 0 },
+export default function Character() {
+    const [pupil, setPupil] = useState({
+        x: 0,
+        y: 0,
     });
 
-    const handleMouseMove = (e) => {
-        const isDesktop = window.matchMedia(
-            "(hover: hover) and (pointer: fine)"
-        ).matches;
+    useEffect(() => {
+        function handlePointerMove(e) {
+            const eyeCenterX = window.innerWidth / 2;
+            const eyeCenterY = window.innerHeight / 2;
 
-        if (!isDesktop || !containerRef.current) return;
+            const dx = e.clientX - eyeCenterX;
+            const dy = e.clientY - eyeCenterY;
 
-        const rect = containerRef.current.getBoundingClientRect();
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
+            if (distance === 0) {
+                setPupil({ x: 0, y: 0 });
+                return;
+            }
 
-        const updateEye = (eyeX, eyeY, maxDistance = 8) => {
-            const angle = Math.atan2(mouseY - eyeY, mouseX - eyeX);
+            // حداکثر میزان حرکت مردمک
+            const maxMove = 10;
 
-            return {
-                x: Math.cos(angle) * maxDistance,
-                y: Math.sin(angle) * maxDistance,
-            };
+            const move = Math.min(distance / 15, maxMove);
+
+            const x = (dx / distance) * move;
+            const y = (dy / distance) * move;
+
+            setPupil({
+                x,
+                y,
+            });
+        }
+
+        window.addEventListener("pointermove", handlePointerMove);
+
+        return () => {
+            window.removeEventListener("pointermove", handlePointerMove);
         };
-
-        const leftEyeCenter = {
-            x: rect.width * 0.4,
-            y: rect.height * 0.405,
-        };
-
-        const rightEyeCenter = {
-            x: rect.width * 0.55,
-            y: rect.height * 0.4,
-        };
-
-        setEyes({
-            left: updateEye(leftEyeCenter.x, leftEyeCenter.y),
-            right: updateEye(rightEyeCenter.x, rightEyeCenter.y),
-        });
-    };
+    }, []);
 
     return (
-        <div
-            ref={containerRef}
-            className="avatar"
-            onMouseMove={handleMouseMove}
-        >
-            <Image
-                src="/images/avatar.jpg"
-                alt="Avatar"
-                width={960}
-                height={1280}
-                priority
+        <div className="character">
+
+            {/* =========================
+                LAYER 1
+                سفیدی چشم
+            ========================= */}
+            <img
+                src="/images/character/eyes-white.png"
+                className="eyes"
+                alt=""
             />
 
-            {/* Left Eye */}
-            <div className="eye left-eye">
-                <div
-                    className="pupil"
-                    style={{
-                        transform: `translate(${eyes.left.x}px, ${eyes.left.y}px)`,
-                    }}
-                />
-            </div>
+            {/* =========================
+                LAYER 2
+                مردمک
+            ========================= */}
+            <img
+                src="/images/character/pupils.png"
+                className="pupils"
+                alt=""
+                style={{
+                    transform: `
+                        translate(${pupil.x}px, ${pupil.y}px)
+                    `,
+                }}
+            />
 
-            {/* Right Eye */}
-            <div className="eye right-eye">
-                <div
-                    className="pupil"
-                    style={{
-                        transform: `translate(${eyes.right.x}px, ${eyes.right.y}px)`,
-                    }}
-                />
-            </div>
+            {/* =========================
+                LAYER 3
+                پوسته کاراکتر
+            ========================= */}
+            <img
+                src="/images/character/character.png"
+                className="character-image"
+                alt=""
+            />
+
         </div>
     );
 }
