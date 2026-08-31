@@ -11,7 +11,7 @@ export default function Character() {
     useEffect(() => {
         function handlePointerMove(e) {
             const eyeCenterX = window.innerWidth / 2;
-            const eyeCenterY = window.innerHeight / 2;
+            const eyeCenterY = window.innerHeight / 4;
 
             const dx = e.clientX - eyeCenterX;
             const dy = e.clientY - eyeCenterY;
@@ -24,7 +24,7 @@ export default function Character() {
             }
 
             // حداکثر میزان حرکت مردمک
-            const maxMove = 10;
+            const maxMove = 8;
 
             const move = Math.min(distance / 15, maxMove);
 
