@@ -10,6 +10,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
+import OrbitingItems3D from "@/components/animata/list/orbiting-items-3-d";
 
 export default function page() {
   return (
@@ -25,9 +26,8 @@ export default function page() {
           />
         </div>
 
-
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 gap-3">
-          <div className="bg-white size-40 md:size-70 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
+          {/* <div className="bg-white size-40 md:size-70 flex justify-center items-end  rounded-full shrink-0 shadow-2xl mt-50">
             <Image
               // src="/images/Majidmoeini_web.png"
               src="/images/Majidmoeini_web1.png"
@@ -36,7 +36,11 @@ export default function page() {
               alt="Person"
               className="reletive w-40 md:w-70 h-fit md:h-fit border-6 border-b-white rounded-b-full"
             />
-          </div>
+
+            
+          </div> */}
+
+          <OrbitingItems3D className="mt-50" />
 
           <div className="flex flex-col w-full md:-translate-y-5">
             <p className="text-lg md:text-3xl text-gray-200 mb-2 max-w-2xl font-modam">

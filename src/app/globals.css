@@ -1,6 +1,20 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+@theme inline {
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+/* -------------------------------------------------------------------------------- */
 
 .character {
   position: relative;
@@ -27,7 +41,6 @@
   pointer-events: none;
 }
 
-
 /* =========================
    LAYER 2
    مردمک
@@ -49,7 +62,6 @@
   transition: transform 0.08s ease-out;
 }
 
-
 /* =========================
    LAYER 3
    پوسته کاراکتر
@@ -68,36 +80,7 @@
   pointer-events: none;
 }
 
-
-/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap");
-
-:root {
-  --font-poppins: "Poppins", sans-serif;
-  --font-quicksand: "Quicksand", sans-serif;
-  --font-nunito: "Nunito", sans-serif;
-}
-
-body {
-  font-family: var(--font-poppins);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font-poppins {
-  font-family: var(--font-poppins);
-}
-
-.font-quicksand {
-  font-family: var(--font-quicksand);
-}
-
-.font-nunito {
-  font-family: var(--font-nunito);
-} */
-
-/* @custom-variant dark (&:is(.dark *)); */
-
-/* added by AI - changeable ! */
+/* ---------------------------------------------------------------------------------- */
 
 @keyframes slideIn {
   from {
@@ -175,7 +158,6 @@ body {
 }
 
 @keyframes waveSlow {
-
   0%,
   100% {
     transform: translateX(0);
@@ -187,7 +169,6 @@ body {
 }
 
 @keyframes waveMedium {
-
   0%,
   100% {
     transform: translateX(0);
@@ -199,7 +180,6 @@ body {
 }
 
 @keyframes waveFast {
-
   0%,
   100% {
     transform: translateY(0);
