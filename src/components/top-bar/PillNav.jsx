@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 // import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import Link from "next/link";
@@ -28,6 +28,7 @@ const PillNav = ({
   const logoTweenRef = useRef(null);
   const hamburgerRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const navContainerRef = useRef(null);
   const navItemsRef = useRef(null);
   const logoRef = useRef(null);
 
@@ -156,20 +157,33 @@ const PillNav = ({
     });
   };
 
-  const handleLogoEnter = () => {
+  const rotateLogo = () => {
     const img = logoImgRef.current;
     if (!img) return;
     logoTweenRef.current?.kill();
-    gsap.set(img, { rotate: 0 });
+    gsap.set(img, { rotation: 0 });
     logoTweenRef.current = gsap.to(img, {
-      rotate: 360,
-      duration: 0.2,
+      rotation: 360,
+      duration: 0.6,
       ease,
       overwrite: "auto",
+      onComplete: () => {
+        gsap.set(img, { rotation: 0 });
+        logoTweenRef.current = null;
+      },
     });
   };
 
-  const toggleMobileMenu = () => {
+  const handleLogoEnter = () => {
+    if (window.matchMedia("(hover: hover)").matches) rotateLogo();
+  };
+
+  const handleLogoClick = () => {
+    rotateLogo();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const toggleMobileMenu = useCallback(() => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
 
@@ -218,7 +232,21 @@ const PillNav = ({
     }
 
     onMobileMenuClick?.();
-  };
+  }, [isMobileMenuOpen, ease, onMobileMenuClick]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleOutsideClick = (event) => {
+      if (!navContainerRef.current?.contains(event.target)) {
+        toggleMobileMenu();
+      }
+    };
+
+    document.addEventListener("pointerdown", handleOutsideClick);
+    return () =>
+      document.removeEventListener("pointerdown", handleOutsideClick);
+  }, [isMobileMenuOpen, toggleMobileMenu]);
 
   const isExternalLink = (href) =>
     href.startsWith("http://") ||
@@ -243,6 +271,7 @@ const PillNav = ({
 
   return (
     <div
+      ref={navContainerRef}
       className={`fixed  top-0 z-1000 w-full left-0 md:w-auto md:left-auto md:py-1.5 py-0.5 bg-neutral-900/40 backdrop-blur-xl border border-white/10 md:rounded-br-lg`}
     >
       <nav
@@ -255,6 +284,7 @@ const PillNav = ({
             href={items[0].href}
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
+            onClick={handleLogoClick}
             role="menuitem"
             ref={(el) => {
               logoRef.current = el;
@@ -278,6 +308,7 @@ const PillNav = ({
             href={items?.[0]?.href || "#"}
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
+            onClick={handleLogoClick}
             ref={(el) => {
               logoRef.current = el;
             }}
@@ -455,7 +486,7 @@ const PillNav = ({
                     style={defaultStyle}
                     onMouseEnter={hoverIn}
                     onMouseLeave={hoverOut}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={toggleMobileMenu}
                   >
                     {item.label}
                   </Link>
@@ -466,7 +497,7 @@ const PillNav = ({
                     style={defaultStyle}
                     onMouseEnter={hoverIn}
                     onMouseLeave={hoverOut}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={toggleMobileMenu}
                   >
                     {item.label}
                   </a>

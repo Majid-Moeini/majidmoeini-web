@@ -44,7 +44,7 @@ export default function MyForm() {
     setStatus(null);
 
     try {
-      const response = await fetch("https://majidmoeini.ir/send-email.php", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,24 +52,37 @@ export default function MyForm() {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      // const result = await response.json();
+      const responseText = await response.text();
 
-      if (response.ok) {
-        setStatus({ type: "success", message: "Email sent successfully!" });
-        setFormData({ name: "", email: "", role: "", message: "" });
-      } else {
-        setStatus({
-          type: "error",
-          message: result.error || "Failed to send email",
-        });
+      console.log("Status:", response.status);
+      console.log("Response:", responseText);
+
+      const result = responseText ? JSON.parse(responseText) : {};
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
       }
+
+      setStatus({
+        type: "success",
+        message: "Message sent successfully!",
+      });
+
+      setFormData({
+        name: "",
+        companyName: "",
+        email: "",
+        role: "",
+        developerType: "",
+        message: "",
+      });
     } catch (error) {
-      console.log("Full error object:", error);
-      console.log("Error message:", error.message);
-      console.log("Error cause:", error.cause);
+      console.error(error);
+
       setStatus({
         type: "error",
-        message: "Connection error: " + error.message,
+        message: "Failed to send message. Please try again.",
       });
     } finally {
       setLoading(false);

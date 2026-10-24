@@ -1,0 +1,28 @@
+{
+  "title": "What I do",
+  "subtitle": "My Services",
+  "items": [
+    {
+      "title": "Data Analytics & Visualization",
+      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+    },
+    {
+      "title": "Data Analytics & Visualization",
+      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+    },
+    {
+      "title": "Data Analytics & Visualization",
+      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+    },
+    {
+      "title": "Data Analytics & Visualization",
+      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+    },
+    {
+      "title": "Data Analytics & Visualization",
+      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward.",
+      "image": "/images/next.jpg",
+      "imageAlt": "Next.js"
+    }
+  ]
+}

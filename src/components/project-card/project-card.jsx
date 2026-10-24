@@ -3,7 +3,7 @@ import Projects from "./projects";
 
 export default function ProjectCard() {
   return (
-    <div className="mx-auto md:my-20 my-10 flex flex-col items-center gap-8 px-4 md:px-8 w-full md:max-w-5xl">
+    <section id="projects" className="scroll-mt-20 mx-auto md:my-20 my-10 flex flex-col items-center gap-8 px-4 md:px-8 w-full md:max-w-5xl">
       <div className="flex flex-col items-center gap-1">
         <h2 className="font-modam md:text-5xl text-2xl font-bold text-gray-50">
           {"Projects"}
@@ -14,6 +14,6 @@ export default function ProjectCard() {
         </p>
       </div>
       <Projects />
-    </div>
+    </section>
   );
 }

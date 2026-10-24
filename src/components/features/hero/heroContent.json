@@ -1,0 +1,8 @@
+{
+  "greeting": "Hi there!",
+  "name": "I'm Majid Moeini",
+  "role": "Frontend Developer",
+  "description": "Passionate Front-End Developer with a year of practical experience in designing sleek, responsive interfaces. I specialize in using React, Next.js, and Tailwind CSS to deliver optimized, fluid, and engaging user experiences.",
+  "contactLabel": "Contact Me",
+  "backgroundAlt": "Hero background"
+}

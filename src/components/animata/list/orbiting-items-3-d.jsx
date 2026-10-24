@@ -165,8 +165,8 @@ function OrbitingItem({
  * @param {OrbitingItems3DProps} props
  */
 export default function OrbitingItems3D({
-  radiusX = 70,
-  radiusY = -25,
+  radiusX,
+  radiusY,
   tiltAngle = 360 - 200,
   duration = 60,
   items = LucideIcons,
@@ -174,6 +174,17 @@ export default function OrbitingItems3D({
   containerClassName,
   className,
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const effectiveRadiusX = radiusX ?? (isMobile ? 60 : 70);
+  const effectiveRadiusY = radiusY ?? (isMobile ? -14 : -25);
+
   return (
     <div
       className={cn(
@@ -189,7 +200,7 @@ export default function OrbitingItems3D({
       /> */}
       <div
         className={cn(
-          "relative flex h-64 w-64 items-center justify-center ease-linear repeat-infinite",
+          "relative flex h-56 w-56 md:h-64 md:w-64 items-center justify-center ease-linear repeat-infinite",
           className,
         )}
       >
@@ -198,8 +209,8 @@ export default function OrbitingItems3D({
           <OrbitingItem
             key={index}
             index={index}
-            radiusX={radiusX}
-            radiusY={radiusY}
+            radiusX={effectiveRadiusX}
+            radiusY={effectiveRadiusY}
             totalItems={items.length}
             tiltAngle={tiltAngle}
             duration={duration}

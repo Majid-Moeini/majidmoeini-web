@@ -1,0 +1,27 @@
+{
+  "closingMessage": "Let's\n   Work Together ...",
+  "email": "majid.moe2001@gmail.com",
+  "copyright": "© 2026 All rights reserved.",
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/majid-moeini-7b9a24347/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Majid-Moeini",
+      "icon": "github"
+    },
+    {
+      "name": "Telegram",
+      "href": "#",
+      "icon": "telegram"
+    },
+    {
+      "name": "Instagram",
+      "href": "#",
+      "icon": "instagram"
+    }
+  ]
+}

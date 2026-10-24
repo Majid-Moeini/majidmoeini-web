@@ -6,12 +6,13 @@ export default function TopBar() {
       logo="/images/Micon.svg"
       logoAlt="Company Logo"
       items={[
-        { label: "Home", href: "/" },
-        { label: "About", href: "/about" },
-        { label: "Services", href: "/services" },
-        { label: "Contact", href: "/contact" },
+        // { label: "Home", href: "#home" },
+        { label: "About", href: "#aboutMe" },
+        { label: "Services", href: "#services" },
+        { label: "Projects", href: "#projects" },
+        { label: "Contact", href: "#contact" },
       ]}
-      activeHref="/"
+      activeHref="#home"
       className="custom-nav"
       ease="power2.easeOut"
       baseColor="000000"
