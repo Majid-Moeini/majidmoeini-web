@@ -2,7 +2,10 @@ import content from "./aboutMeContent.json";
 
 export default function AboutMeSection() {
   return (
-    <section id="aboutMe" className="scroll-mt-20 mx-auto md:my-20 my-10 flex flex-col items-center gap-6 px-4">
+    <section
+      id="aboutMe"
+      className="scroll-mt-20 mx-auto md:my-20 my-10 flex flex-col items-center gap-6 px-4"
+    >
       <div className="flex flex-col items-center">
         <h2 className="font-modam md:text-5xl text-2xl font-bold text-gray-50">
           {content.title}
@@ -20,9 +23,13 @@ export default function AboutMeSection() {
         ))}
       </div>
 
-      <button className="px-5 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 text-white rounded-full transition font-modam text-xl font-light cursor-pointer md:mt-3 w-fit items-center">
+      <a
+        href="/Majid Moeini CV.pdf"
+        download="Majid-Moeini-Resume.pdf"
+        className="px-5 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 text-white rounded-full transition font-modam text-xl font-light cursor-pointer md:mt-3 w-fit inline-flex items-center justify-center"
+      >
         {content.resumeLabel}
-      </button>
+      </a>
     </section>
   );
 }

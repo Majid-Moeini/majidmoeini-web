@@ -3,24 +3,29 @@
   "subtitle": "My Services",
   "items": [
     {
-      "title": "Data Analytics & Visualization",
-      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+      "title": "Web Performance Optimization",
+      "description": "I audit and fine-tune your website to load faster and feel smoother. From Core Web Vitals to bundle size and image delivery, I turn slow pages into fast experiences that keep users engaged and improve conversions.",
+      "icon": "Gauge"
     },
     {
-      "title": "Data Analytics & Visualization",
-      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+      "title": "Accessibility & Compliance",
+      "description": "I make your product usable for everyone. By implementing WCAG standards and keyboard and screen reader support, I help you reach a wider audience and meet regulations like the European Accessibility Act.",
+      "icon": "Accessibility"
     },
     {
-      "title": "Data Analytics & Visualization",
-      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+      "title": "Complex Web Applications",
+      "description": "I build scalable dashboards and interactive single-page applications with advanced state management, real-time features, and clean API integration, designed to stay maintainable as your product grows.",
+      "icon": "LayoutPanelTop"
     },
     {
-      "title": "Data Analytics & Visualization",
-      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward."
+      "title": "AI-Generated Code Review & Stabilization",
+      "description": "Built a prototype with AI tools? I review, refactor, and harden it for security, structure, and maintainability, turning a quick draft into a reliable, production-ready product.",
+      "icon": "Bot"
     },
     {
-      "title": "Data Analytics & Visualization",
-      "description": "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward.",
+      "title": "Next.js Development & Technical SEO",
+      "description": "I build fast, search-friendly websites with server-side rendering, static generation, structured data, and clean metadata, so your content gets indexed properly and found by the right audience.",
+      "icon": "Search",
       "image": "/images/next.jpg",
       "imageAlt": "Next.js"
     }
